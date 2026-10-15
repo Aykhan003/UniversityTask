@@ -8,7 +8,7 @@ public class UniversityDbContext : DbContext
     override protected void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         base.OnConfiguring(optionsBuilder);
-        optionsBuilder.UseSqlServer("Server=localhost;Database=UniversityDb;Trusted_Connection=True;TrustServerCertificate=true");
+        optionsBuilder.UseNpgsql("host=localhost;port=5432;Database=UniversityDb;Username=postgres;Password=0003;");
     }
     override protected void OnModelCreating(ModelBuilder modelBuilder)
     {
